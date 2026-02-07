@@ -24,3 +24,9 @@ Once the ASG is ready, you can officially move the existing instance into the gr
 3. Go to Actions > Instance Settings > Attach to Auto Scaling Group.
 ## The Result: Automated Monitoring
 Once attached, the ASG begins continuous monitoring of the instance status. If the instance fails or stops for any reason, the ASG will automatically trigger the creation of a replacement instance using the Launch Template you configured, ensuring your application stays online
+## Step 5: Ongoing Management (Reboots & Maintenance)
+Here is how to handle the instance once it is part of the group:
+- Can you reboot? Yes. Rebooting is a standard procedure to ensure system health. However, if an instance stays down for too long, the ASG may view it as "unhealthy" and replace it.
+- The Detach Method: If you need to remove the instance from the ASG so it can live as a separate, independent entity again, you can use the Detach option.
+    ◦ Path: ASG > Instance Management > Detach.
+• The Standby Method: If you need to perform maintenance but don't want to remove the instance from the group entirely, use Standby mode. This allows the instance to remain part of the ASG while pausing the monitoring/replacement feature, ensuring it isn't terminated while you work on it.
