@@ -15,7 +15,7 @@ To manage the instance, the ASG requires a Launch Template. Use the following de
 ## Step 3: Set Up the Auto Scaling Group
 When creating the ASG, the goal is to initialize it without immediately launching new, unwanted instances.
 - Network Settings: Use the same VPC and Subnets where the existing instance resides.
-- Group Size: Set the Desired capacity to 0 and Minimum capacity to 0. Set the Maximum capacity to 1.
+- Group Size: Set the **Desired capacity to 0** and **Minimum capacity to 0**. Set the **Maximum capacity to 1**.
 - Note: By starting with a desired capacity of 0, the ASG will stay empty until you manually attach your instance.
 ## Step 4: Attach the Instance
 Once the ASG is ready, you can officially move the existing instance into the group:
